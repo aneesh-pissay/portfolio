@@ -4,7 +4,16 @@ const nextConfig: NextConfig = {
   /* config options here */
   output: 'standalone',
   images: {
-    domains: ["lh3.googleusercontent.com", "noirly-calculator.aneesh-pissay.in"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'noirly-calculator.aneesh-pissay.in',
+      },
+    ],
   },
 };
 
