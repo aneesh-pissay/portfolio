@@ -1,0 +1,27 @@
+const fs = require('fs');
+const path = require('path');
+
+function copyRecursive(src, dest) {
+  const exists = fs.existsSync(src);
+  const stats = exists && fs.statSync(src);
+  const isDirectory = exists && stats.isDirectory();
+
+  if (isDirectory) {
+    if (!fs.existsSync(dest)) {
+      fs.mkdirSync(dest, { recursive: true });
+    }
+    fs.readdirSync(src).forEach((childItemName) => {
+      copyRecursive(
+        path.join(src, childItemName),
+        path.join(dest, childItemName)
+      );
+    });
+  } else {
+    fs.copyFileSync(src, dest);
+  }
+}
+
+console.log('Copying static assets to standalone build...');
+copyRecursive('.next/static', '.next/standalone/.next/static');
+copyRecursive('public', '.next/standalone/public');
+console.log('✓ Static assets copied successfully');

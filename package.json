@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "postbuild": "xcopy /E /I /Y .next\\static .next\\standalone\\.next\\static && xcopy /E /I /Y public .next\\standalone\\public",
+    "postbuild": "node scripts/copy-standalone.js",
     "start": "node .next/standalone/server.js",
     "lint": "eslint"
   },
