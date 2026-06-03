@@ -1,11 +1,11 @@
 import { mdiGithub, mdiOpenInNew } from '@mdi/js';
 import Icon from '@mdi/react';
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 interface ProjectCardProps {
   title: string;
   description: string;
-  image: StaticImageData;
+  imageUrl: string;
   tags: string[];
   demoUrl?: string;
   githubUrl?: string;
@@ -14,7 +14,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
-  image,
+  imageUrl,
   tags,
   demoUrl,
   githubUrl,
@@ -24,11 +24,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       {/* Project Image */}
       <div className="h-48 bg-secondary border-b border-border">
         <Image
-          src={image}
+          src={imageUrl}
           alt={title}
           width={600}
           height={400}
           className="w-full h-full object-contain"
+          unoptimized
         />
       </div>
 

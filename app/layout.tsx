@@ -21,15 +21,26 @@ export default function RootLayout({
 }>) {
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Skills", href: "/skills" },
-    { label: "Projects", href: "/projects" },
-    // { label: "Contact", href: "/contact" },
+    { label: "About", href: "/#about" },
+    { label: "Stack", href: "/#stack" },
+    { label: "Experience", href: "/#experience" },
+    { label: "Work", href: "/#work" },
+    { label: "Contact", href: "/#contact" },
   ];
   return (
-    <html lang="en">
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <head>
+        {/* Restore theme before first paint to avoid flash */}
+        <script dangerouslySetInnerHTML={{ __html: `
+          try {
+            var t = localStorage.getItem('theme');
+            if (t === 'light') document.documentElement.classList.remove('dark');
+            else document.documentElement.classList.add('dark');
+          } catch(e) {}
+        `}} />
+      </head>
       <body
-        className={`${lexend.variable} antialiased glass-effect`}
+        className={`${lexend.variable} antialiased`}
       >
         <Header
           title="Aneesh Pissay"

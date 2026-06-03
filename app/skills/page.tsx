@@ -3,7 +3,7 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SkillCard from "@/components/SkillCard";
-import { skills } from "@/data/skills";
+import { skills } from "@/data/skills/index";
 import Icon from '@mdi/react';
 import { 
   mdiMonitorDashboard, 

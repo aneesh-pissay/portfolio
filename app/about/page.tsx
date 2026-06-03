@@ -32,14 +32,18 @@ export default function About() {
                         <div className="flex justify-center">
                             <div className="relative">
                                 <div className="w-80 h-80 bg-secondary border border-border glass-effect flex items-center justify-center overflow-hidden">
-                                    <Image
-                                        src={about.profileImage}
-                                        alt="Profile"
-                                        width={288}
-                                        height={288}
-                                        className="w-72 h-72 object-cover"
-                                        unoptimized
-                                    />
+                                    {about.profileImage ? (
+                                        <Image
+                                            src={about.profileImage}
+                                            alt="Profile"
+                                            width={288}
+                                            height={288}
+                                            className="w-72 h-72 object-cover"
+                                            unoptimized
+                                        />
+                                    ) : (
+                                        <span className="text-7xl font-bold text-muted-foreground">A</span>
+                                    )}
                                 </div>
                                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent rounded-full" />
                             </div>

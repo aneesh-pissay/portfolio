@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/ProjectCard";
-import { projects } from "@/data/projects";
+import { projects } from "@/data/projects/index";
 import Icon from '@mdi/react';
 import { mdiWeb, mdiCellphone } from '@mdi/js';
 
@@ -103,7 +103,7 @@ export default function Projects() {
                                 <ProjectCard
                                     title={project.title}
                                     description={project.description}
-                                    image={project.image}
+                                    imageUrl={project.imageUrl}
                                     tags={project.technologies}
                                     demoUrl={project.url}
                                     githubUrl={project.githubUrl}
@@ -120,7 +120,7 @@ export default function Projects() {
                                 <ProjectCard
                                     title={project.title}
                                     description={project.description}
-                                    image={project.image}
+                                    imageUrl={project.imageUrl}
                                     tags={project.technologies}
                                     demoUrl={project.url}
                                     githubUrl={project.githubUrl}
