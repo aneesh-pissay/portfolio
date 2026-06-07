@@ -104,6 +104,7 @@ export default function Projects() {
                                     title={project.title}
                                     description={project.description}
                                     imageUrl={project.imageUrl}
+                                    imageUrlDark={project.imageUrlDark}
                                     tags={project.technologies}
                                     demoUrl={project.url}
                                     githubUrl={project.githubUrl}
@@ -121,6 +122,7 @@ export default function Projects() {
                                     title={project.title}
                                     description={project.description}
                                     imageUrl={project.imageUrl}
+                                    imageUrlDark={project.imageUrlDark}
                                     tags={project.technologies}
                                     demoUrl={project.url}
                                     githubUrl={project.githubUrl}

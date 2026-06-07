@@ -403,8 +403,26 @@ export default function Home() {
                   {/* Left: Feature Graphic */}
                   <div className="lg:w-3/5 flex-shrink-0" style={{ background: "var(--bg)" }}>
                     {project.featureGraphic ? (
-                      <Image src={project.featureGraphic} alt={`${project.title} feature graphic`}
-                        width={900} height={600} className="w-full h-full object-contain" />
+                      <>
+                        <Image
+                          src={project.featureGraphic}
+                          alt={`${project.title} feature graphic`}
+                          width={900}
+                          height={600}
+                          className="w-full h-full object-contain dark:hidden"
+                          priority={project === featuredProjects[0]}
+                        />
+                        {project.featureGraphicDark && (
+                          <Image
+                            src={project.featureGraphicDark}
+                            alt={`${project.title} feature graphic`}
+                            width={900}
+                            height={600}
+                            className="hidden w-full h-full object-contain dark:block"
+                            priority={project === featuredProjects[0]}
+                          />
+                        )}
+                      </>
                     ) : (
                       <div className="w-full h-full min-h-[320px]" style={{ background: "var(--surface)" }} />
                     )}

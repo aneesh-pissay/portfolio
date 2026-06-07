@@ -6,6 +6,7 @@ interface ProjectCardProps {
   title: string;
   description: string;
   imageUrl: string;
+  imageUrlDark?: string;
   tags: string[];
   demoUrl?: string;
   githubUrl?: string;
@@ -15,6 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   imageUrl,
+  imageUrlDark,
   tags,
   demoUrl,
   githubUrl,
@@ -22,15 +24,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="bg-card border border-border hover:border-muted-foreground transition-colors glass-effect">
       {/* Project Image */}
-      <div className="h-48 bg-secondary border-b border-border">
+      <div className="relative h-48 bg-secondary border-b border-border">
         <Image
           src={imageUrl}
           alt={title}
           width={600}
           height={400}
-          className="w-full h-full object-contain"
+          className={`absolute inset-0 w-full h-full object-contain${imageUrlDark ? " dark:hidden" : ""}`}
           unoptimized
         />
+        {imageUrlDark && (
+          <Image
+            src={imageUrlDark}
+            alt={title}
+            width={600}
+            height={400}
+            className="absolute inset-0 hidden w-full h-full object-contain dark:block"
+            unoptimized
+          />
+        )}
       </div>
 
       {/* Project Details */}
