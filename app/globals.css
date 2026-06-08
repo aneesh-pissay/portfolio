@@ -49,16 +49,25 @@ body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* ── Light theme (default) ── */
+/* ── Light theme (default) — noirlyTheme ── */
 :root {
   --radius: 0.5rem;
-  --bg:       #FFFFFF;
-  --surface:  #F8FAFC;
-  --primary:  #0284C7;
-  --text:     #000000;
-  --text-secondary: rgba(0,0,0,0.70);
-  --text-muted:     rgba(0,0,0,0.50);
-  --border-color:   rgba(0,0,0,0.10);
+  --bg:              #F8FAFC;
+  --surface:         #FFFFFF;
+  --surface-variant: #F1F5F9;
+  --primary:         #38BDF8;
+  --primary-hover:   #0284C7;
+  --primary-soft:    #E0F2FE;
+  --text:            #020617;
+  --text-secondary:  #475569;
+  --text-muted:      #94A3B8;
+  --border-color:    #E2E8F0;
+  --divider:         #CBD5E1;
+  --success:         #16A34A;
+  --warning:         #D97706;
+  --error:           #DC2626;
+  --icon:            #334155;
+  --icon-active:     #38BDF8;
 
   /* shadcn compat */
   --background: var(--bg);
@@ -68,36 +77,45 @@ body {
   --popover: var(--surface);
   --popover-foreground: var(--text);
   --primary-color: var(--primary);
-  --primary-foreground: #ffffff;
-  --secondary: var(--surface);
+  --primary-foreground: var(--text);
+  --secondary: var(--surface-variant);
   --secondary-foreground: var(--text);
-  --muted: rgba(0,0,0,0.06);
+  --muted: var(--surface-variant);
   --muted-foreground: var(--text-muted);
   --accent: var(--primary);
-  --accent-foreground: #ffffff;
-  --destructive: #ef4444;
+  --accent-foreground: var(--text);
+  --destructive: var(--error);
   --border: var(--border-color);
-  --input: var(--surface);
+  --input: var(--surface-variant);
   --ring: var(--primary);
   --sidebar: var(--surface);
   --sidebar-foreground: var(--text);
   --sidebar-primary: var(--primary);
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: var(--surface);
+  --sidebar-primary-foreground: var(--text);
+  --sidebar-accent: var(--surface-variant);
   --sidebar-accent-foreground: var(--text);
   --sidebar-border: var(--border-color);
   --sidebar-ring: var(--primary);
 }
 
-/* ── Dark theme ── */
+/* ── Dark theme — noirlyTheme ── */
 .dark {
-  --bg:       #0B0F19;
-  --surface:  #111827;
-  --primary:  #38BDF8;
-  --text:     #ffffff;
-  --text-secondary: rgba(255,255,255,0.70);
-  --text-muted:     rgba(255,255,255,0.50);
-  --border-color:   rgba(255,255,255,0.10);
+  --bg:              #020617;
+  --surface:         #0F172A;
+  --surface-variant: #111827;
+  --primary:         #38BDF8;
+  --primary-hover:   #0EA5E9;
+  --primary-soft:    #082F49;
+  --text:            #F8FAFC;
+  --text-secondary:  #94A3B8;
+  --text-muted:      #64748B;
+  --border-color:    #1E293B;
+  --divider:         #334155;
+  --success:         #22C55E;
+  --warning:         #F59E0B;
+  --error:           #EF4444;
+  --icon:            #E2E8F0;
+  --icon-active:     #38BDF8;
 
   --background: var(--bg);
   --foreground: var(--text);
@@ -105,20 +123,20 @@ body {
   --card-foreground: var(--text);
   --popover: var(--surface);
   --popover-foreground: var(--text);
-  --secondary: var(--surface);
+  --secondary: var(--surface-variant);
   --secondary-foreground: var(--text);
-  --muted: rgba(255,255,255,0.06);
+  --muted: var(--surface-variant);
   --muted-foreground: var(--text-muted);
   --accent: var(--primary);
-  --accent-foreground: #000000;
+  --accent-foreground: var(--bg);
   --border: var(--border-color);
-  --input: var(--surface);
+  --input: var(--surface-variant);
   --ring: var(--primary);
   --sidebar: var(--surface);
   --sidebar-foreground: var(--text);
   --sidebar-primary: var(--primary);
-  --sidebar-primary-foreground: #000000;
-  --sidebar-accent: var(--surface);
+  --sidebar-primary-foreground: var(--bg);
+  --sidebar-accent: var(--surface-variant);
   --sidebar-accent-foreground: var(--text);
   --sidebar-border: var(--border-color);
   --sidebar-ring: var(--primary);
