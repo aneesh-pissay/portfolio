@@ -11,11 +11,6 @@ export interface FeaturedProject {
   type: string;
   description: string;
   stack: string[];
-  features: string[];
-  tags: string[];
-  coreTech: string;
-  keyFeature: string;
-  githubUrl: string;
   url: string;
   featureGraphic: StaticImageData | string | null;
   featureGraphicDark: StaticImageData | string | null;
@@ -25,15 +20,10 @@ export interface FeaturedProject {
 export const featuredProjects: FeaturedProject[] = [
   {
     title: "Noirly AlgoLab",
-    type: "Web Application",
+    type: "EdTech Product",
     description:
       "A visual DSA learning platform with step-by-step animations, synced code tracing, and structured lessons from arrays to graphs.",
     stack: ["Next.js", "React", "TypeScript", "MongoDB"],
-    features: ["Interactive Visualizers", "Structured Learning Path", "Theory → Visualize → Quiz"],
-    tags: ["WEB APPLICATION", "NEXT.JS"],
-    coreTech: "Next.js, React, TypeScript",
-    keyFeature: "318 visual lessons across DSA tracks",
-    githubUrl: "#",
     url: "https://noirly.algolab.aneesh-pissay.in/",
     featureGraphic: noirlyAlgolabFeatureGraphic,
     featureGraphicDark: noirlyAlgolabFeatureGraphicDark,
@@ -41,15 +31,10 @@ export const featuredProjects: FeaturedProject[] = [
   },
   {
     title: "Noirly Calculator",
-    type: "Web Application",
+    type: "Utility Product",
     description:
-      "A full-featured browser calculator — basic, scientific, unit conversion, graphing, and programmer modes. Works offline with local history.",
+      "A full-featured browser calculator with basic, scientific, unit conversion, graphing, and programmer modes. Works offline with local history.",
     stack: ["React", "TypeScript", "Vite"],
-    features: ["Five Calculator Modes", "Graph Plotter", "Offline Ready"],
-    tags: ["WEB APPLICATION", "REACT"],
-    coreTech: "React, TypeScript, Vite",
-    keyFeature: "Five modes, offline-ready, local history",
-    githubUrl: "#",
     url: "https://noirly.calculator.aneesh-pissay.in/",
     featureGraphic: noirlyCalculatorFeatureGraphic,
     featureGraphicDark: noirlyCalculatorFeatureGraphicDark,

@@ -1,12 +1,18 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
-import { Lexend } from "next/font/google";
+import { Lexend, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const lexend = Lexend({
   variable: "--font-lexend",
   subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -40,7 +46,7 @@ export default function RootLayout({
         `}} />
       </head>
       <body
-        className={`${lexend.variable} antialiased`}
+        className={`${lexend.variable} ${spaceGrotesk.variable} antialiased`}
       >
         <Header
           title="Aneesh Pissay"

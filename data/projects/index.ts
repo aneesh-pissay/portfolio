@@ -24,7 +24,7 @@ export const projects: Project[] = [
     {
         title: "Noirly Calculator",
         description:
-            "A full-featured browser calculator — basic, scientific, unit conversion, graphing, and programmer modes. Works offline with local history.",
+            "A full-featured browser calculator with basic, scientific, unit conversion, graphing, and programmer modes. Works offline with local history.",
         technologies: ["React", "TypeScript", "Vite"],
         imageUrl: "/projects/noirly-calculator-feature-graphic.png",
         imageUrlDark: "/projects/noirly-calculator-feature-graphic-dark.png",

@@ -24,7 +24,7 @@ export default function About() {
                                 href="/skills"
                                 className="btn-accent px-8 py-3 transition-colors font-medium cursor-pointer rounded-sm inline-block"
                             >
-                                View Skills
+                                See My Skills
                             </Link>
                         </div>
 
